@@ -1,0 +1,60 @@
+table{
+    width: 70%;
+    padding: 30px 20px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    td{
+        vertical-align: top;
+        font-family: 'Roboto', sans-serif;
+    }
+    .product{
+        border-bottom: 1px solid #121212;
+        padding-block: 10px;
+        display: flex;
+        &:last-child{
+            border-bottom: none;
+        }
+        &__image{
+            width: 150px;
+            border: 1px solid #bdbdbd;
+            img{
+                width: 100%;
+            }
+        }
+        &__name{
+            padding-inline-start: 10px;
+            width: 40%;
+            padding-block-start: 15px;
+        }
+        &__quantity{
+            width: 10%;
+            padding-block-start: 15px;
+        }
+        &-summary{
+            width: 25%;
+            padding-block-start: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            &__value, &__per-item{
+                p{
+                    &:first-child{
+                        font-size: 12px;
+                    }
+                    font-size: 18px;
+                }
+            }
+        }
+        &__action{
+            padding-block-start: 15px;
+            button{
+                background-color: none;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: white;
+                }
+            }
+        }
+    }
+}

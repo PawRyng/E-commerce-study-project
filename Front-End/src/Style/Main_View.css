@@ -1,0 +1,97 @@
+.best-seller {
+  background-color: #121212;
+  padding-block: 60px;
+}
+.best-seller-container {
+  max-width: 1500px;
+  margin-inline: auto;
+}
+.best-seller__title {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+.best-seller-items {
+  min-height: 300px;
+  margin-block-start: 20px;
+}
+.best-seller-items .product-cart {
+  display: block;
+  width: 95%;
+  margin-inline: auto;
+}
+.best-seller-items .product-cart img {
+  width: 100%;
+  aspect-ratio: 330/406;
+}
+.best-seller-items .product-cart a {
+  text-decoration: none;
+}
+.best-seller-items .product-cart__name, .best-seller-items .product-cart__price {
+  text-align: center;
+  margin-block: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+.best-seller-items .product-cart__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+.best-seller-items .product-cart__price {
+  margin-block-start: 0;
+  font-size: 16px;
+}
+.best-seller-items .product-cart__add-to-cart {
+  width: 100%;
+  border-radius: 100vmax;
+  border: none;
+  background-color: #7f58e6;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-block: 8px;
+  cursor: pointer;
+}
+
+.hero {
+  height: calc(100vh - 91px);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-inline: 10%;
+  padding-block-start: 7%;
+  overflow: hidden;
+}
+.hero-container {
+  max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+}
+.hero img {
+  border-radius: 20px;
+  width: 538px;
+  height: 554px;
+}
+.hero__text {
+  border-radius: 20px;
+  background-color: #8858ec;
+  color: white;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 30px 60px 30px 50px;
+  font-family: "Roboto", sans-serif;
+  max-width: 500px;
+}
+.hero__text p {
+  font-size: 20px;
+  font-weight: 100;
+}
+.hero__text h1 {
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=Main_View.css.map */

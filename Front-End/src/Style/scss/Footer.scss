@@ -1,0 +1,24 @@
+footer{
+    background: linear-gradient(90deg, rgba(29,17,53,1) 0%, rgba(40,22,75,1) 45%, rgba(29,17,53,1) 90%, rgba(44,5,50,1) 100%);
+    color: white;
+    padding-block: 20px;
+    .footer-container{
+        max-width: 1500px;
+        margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+        .social-links{
+            &__linkedin{
+                img{
+                    width: 30px;
+                }
+                
+            }
+        }
+    }
+}

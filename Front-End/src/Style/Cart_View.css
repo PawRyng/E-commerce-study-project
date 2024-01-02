@@ -1,0 +1,130 @@
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 10%;
+}
+.empty-cart h2 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+}
+.empty-cart a {
+  display: block;
+  margin-block-start: 13px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  width: 70%;
+  padding: 30px 20px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+}
+table td {
+  vertical-align: top;
+  font-family: "Roboto", sans-serif;
+}
+table .product {
+  border-bottom: 1px solid #121212;
+  padding-block: 10px;
+  display: flex;
+}
+table .product:last-child {
+  border-bottom: none;
+}
+table .product__image {
+  width: 150px;
+  border: 1px solid #bdbdbd;
+}
+table .product__image img {
+  width: 100%;
+}
+table .product__name {
+  padding-inline-start: 10px;
+  width: 40%;
+  padding-block-start: 15px;
+}
+table .product__quantity {
+  width: 10%;
+  padding-block-start: 15px;
+}
+table .product-summary {
+  width: 25%;
+  padding-block-start: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+table .product-summary__value p, table .product-summary__per-item p {
+  font-size: 18px;
+}
+table .product-summary__value p:first-child, table .product-summary__per-item p:first-child {
+  font-size: 12px;
+}
+table .product__action {
+  padding-block-start: 15px;
+}
+table .product__action button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
+table .product__action button:hover {
+  background-color: white;
+}
+
+.summary {
+  position: sticky;
+  top: 100px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  padding: 20px;
+  width: 25%;
+  max-height: 200px;
+}
+.summary h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin-block-end: 25px;
+}
+.summary p {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary__text {
+  font-size: 18px;
+}
+.summary__value {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.cart {
+  min-height: calc(100vh - 165px);
+  padding-block: 50px;
+  background-color: #121212;
+}
+.cart-container {
+  max-width: 1500px;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.cart-container h1 {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  color: white;
+}
+.cart-container--empty {
+  display: block;
+}/*# sourceMappingURL=Cart_View.css.map */

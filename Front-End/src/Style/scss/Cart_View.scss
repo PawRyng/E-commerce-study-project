@@ -1,0 +1,26 @@
+@use './Components/cart/Empty_Cart';
+@use './Components/cart/Cart_View';
+@use './Components/cart/Summary';
+
+.cart{
+    min-height: calc(100vh - (74px + 91px));
+    padding-block: 50px;
+    background-color: #121212;
+    &-container{
+        max-width: 1500px;
+        margin-inline: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        h1{
+            width: 100%;
+            font-family: 'Roboto', sans-serif;
+            font-size: 28px;
+            color: white;
+        }
+        &--empty{
+            display: block;
+        }
+    }
+}
