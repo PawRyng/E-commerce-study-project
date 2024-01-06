@@ -16,12 +16,11 @@ import '../Style/Cart_View.css';
 const CartView = ()=>{
 
     const { productsWithQuantities } = useLoaderData();
-    
     const [cartItems, setCartItems] = useState(productsWithQuantities);
     const [summaryValue, setSummaryValue] = useState(0);
 
     useEffect(() => {
-        const total = cartItems.reduce((acc, product) => acc + (product.price * product.quantity), 0);
+        const total = cartItems?.reduce((acc, product) => acc + (product.price * product.quantity), 0);
         setSummaryValue(total);
     }, [cartItems]);
     
