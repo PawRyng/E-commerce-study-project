@@ -16,12 +16,9 @@ import '../Style/Cart_View.css';
 const CartView = ()=>{
 
     const { productsWithQuantities } = useLoaderData();
-<<<<<<< HEAD
     
     const [cartItems, setCartItems] = useState(productsWithQuantities ? productsWithQuantities : []);
-=======
-    const [cartItems, setCartItems] = useState(productsWithQuantities);
->>>>>>> 75dd796427c024e1edae198031b9e73cbc0f9759
+    
     const [summaryValue, setSummaryValue] = useState(0);
 
     useEffect(() => {
