@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
 const dbOption = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-
 }
 
 module.exports ={

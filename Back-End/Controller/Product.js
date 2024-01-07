@@ -1,7 +1,5 @@
 const Product = require('../Models/ProductSchema')
 
-
-
 module.exports = {
     getProduct: async (req, res) =>{
 
