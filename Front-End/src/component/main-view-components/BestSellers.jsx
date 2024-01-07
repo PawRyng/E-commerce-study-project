@@ -20,7 +20,8 @@ const BestSeller = ({itemList})=>{
                 </div>
                 <div className="best-seller-items">
                 <Slider {...settings}>
-                    {itemList.length > 0 ? (itemList.map((product, index) => <ProductCart key={index} product={product}/>)) : (<p>Brak produktów do wyświetlenia</p>)}
+                    {Array.isArray(itemList) && itemList.length > 0
+                    ? (itemList.map((product, index) => <ProductCart key={index} product={product}/>)) : (<p>Brak produktów do wyświetlenia</p>)}
                 </Slider>
                 </div>
             </div>
