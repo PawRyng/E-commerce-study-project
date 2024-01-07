@@ -5,6 +5,19 @@ const Product = require('../Models/ProductSchema')
 module.exports = {
     getProduct: async (req, res) =>{
 
+    const productID = req.params.porductID;
+    console.log(productID)
+
+    // res.send(`Product ID: ${productID}`);
+    try{
+        const product  = await Product.findById(productID)
+        res.status(200).json(product);
+    }catch{
+        res.status(404).json({message: "brak produktu w bazie"})
+    }
+},
+    getProducts: async (req, res) =>{
+
         const limit = parseInt(req.query.limit) || 100;
         let allProduct = [];
         if(req.query.bestseller){

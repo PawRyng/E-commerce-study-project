@@ -12,11 +12,14 @@ import { GlobalStateProvider } from './state/isOpenStore.jsx';
 
 import MainView from './views/main-view.jsx';
 import CartView from './views/cart-view.jsx';
+import ProductView from './views/product-view.jsx';
+
 
 
 //import loaders
 import { loader as bestsellersLoader}  from "./loaders/bestsellerLoader.jsx";
 import { loader as cartLoader}  from "./loaders/cartLoader.jsx";
+import { loader as productLoader}  from "./loaders/productLoader.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +28,11 @@ const router = createBrowserRouter([
     loader: bestsellersLoader
   },
   {
-    path: "/:categoryName",
-    element: <div>TEST</div>,
+    path: "product/:productID",
+    element: <ProductView />,
+    loader: productLoader,
+    errorElement: <div>error</div>
+    
   },
   {
     path: "/cart",
