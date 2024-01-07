@@ -1,0 +1,34 @@
+$product-row: 4;
+
+.listing{
+    max-width: 1500px;
+    margin-inline: auto;
+    min-height: calc(100vh - (91px + 74px + 30px));
+    padding-inline: 20px;
+    .category{
+        margin-block-start: 30px;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        h4{
+            font-size: 30px;
+        }
+        &-items{
+            display: flex;
+            gap: 30px;
+            margin-block-start: 10px;
+            margin-inline-start: 10px;
+            a{
+                color: inherit;
+                font-size: 20px;
+                text-decoration: none;
+            }
+        }
+    }
+    .products{
+        margin-block: 50px;
+        display: grid;
+        grid-template-columns: repeat($product-row, 1fr); 
+        grid-column-gap: 10px;
+        grid-row-gap: 30px;
+    }
+}

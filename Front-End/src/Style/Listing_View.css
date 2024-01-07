@@ -1,0 +1,32 @@
+.listing {
+  max-width: 1500px;
+  margin-inline: auto;
+  min-height: calc(100vh - 195px);
+  padding-inline: 20px;
+}
+.listing .category {
+  margin-block-start: 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+.listing .category h4 {
+  font-size: 30px;
+}
+.listing .category-items {
+  display: flex;
+  gap: 30px;
+  margin-block-start: 10px;
+  margin-inline-start: 10px;
+}
+.listing .category-items a {
+  color: inherit;
+  font-size: 20px;
+  text-decoration: none;
+}
+.listing .products {
+  margin-block: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+}/*# sourceMappingURL=Listing_View.css.map */

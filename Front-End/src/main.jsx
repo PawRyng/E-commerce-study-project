@@ -13,6 +13,8 @@ import { GlobalStateProvider } from './state/isOpenStore.jsx';
 import MainView from './views/main-view.jsx';
 import CartView from './views/cart-view.jsx';
 import ProductView from './views/product-view.jsx';
+import ListingView from './views/listing-view.jsx';
+import CategoryView from './views/category-view.jsx';
 
 
 
@@ -20,6 +22,8 @@ import ProductView from './views/product-view.jsx';
 import { loader as bestsellersLoader}  from "./loaders/bestsellerLoader.jsx";
 import { loader as cartLoader}  from "./loaders/cartLoader.jsx";
 import { loader as productLoader}  from "./loaders/productLoader.jsx";
+import { loader as productsLoader}  from "./loaders/productsLoader.jsx";
+import { loader as categoryLoader}  from "./loaders/categoryLoader.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +35,20 @@ const router = createBrowserRouter([
     path: "product/:productID",
     element: <ProductView />,
     loader: productLoader,
+    errorElement: <div>error</div>
+    
+  },
+  {
+    path: "products/",
+    element: <ListingView />,
+    loader: productsLoader,
+    errorElement: <div>error</div>
+    
+  },
+  {
+    path: "products/:categoryName",
+    element: <CategoryView />,
+    loader: categoryLoader,
     errorElement: <div>error</div>
     
   },

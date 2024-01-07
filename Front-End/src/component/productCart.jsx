@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-const ProductCart = ({product}) =>{
+const ProductCart = ({product, key}) =>{
     const {_id, name, price, imagePath} = product;
 
     
@@ -17,7 +17,7 @@ const ProductCart = ({product}) =>{
         localStorage.setItem('cart', JSON.stringify(cart));
     }
     return(
-        <div className="product-cart" data-id={_id}>
+        <div key={key} className="product-cart" data-id={_id}>
             <Link to={`/product/${_id}`}>
                 <img src={`${import.meta.env.VITE_APP_USER_URL}${imagePath}`} alt={name} />
                 <p className="product-cart__name">{name}</p>

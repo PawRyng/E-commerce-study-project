@@ -25,6 +25,18 @@ module.exports = {
         }
         res.status(200).json(allProduct);
     },
+    getProductFilters: async (req, res) =>{
+        let products = [];
+        if(req.query.main){
+            
+            products = await Product.find({mainCategory: req.query.main});
+        }
+        else{
+            products = await Product.findAll();
+            
+        }
+        res.status(200).json(products);
+    },
     createProduct: async (req, res)=>{
         try{
             const {name, description, mainCategory, price, bestseller, imagePath} = req.body;
