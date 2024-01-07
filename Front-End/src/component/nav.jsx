@@ -1,4 +1,3 @@
-import { categories } from "../data/settings.json";
 import { NavLink } from "react-router-dom";
 import { useGlobalState } from '../state/isOpenStore';
 
@@ -16,11 +15,6 @@ const Nav = ()=>{
         setIsOpen(!state.isOpen);
     }
 
-    const categoryItem = (name, key) =>{
-        return(
-            <NavLink key={key} className="nav-items__item" to={name}>{name}</NavLink>
-        )
-    }
 
     return(
         <nav>
@@ -29,7 +23,8 @@ const Nav = ()=>{
             </div>
 
             <div className="nav-items">
-                {categories.map((item, index) => categoryItem(item, index))}
+                
+                <NavLink className="nav-items__item" to="/products">Produkty</NavLink>
                 <a className="nav-items__user" onClick={openDropDownHandler}>
                     <IconUser width='24px' height='30px'/>
                     <div className={`nav-items-dropdown ${state.isOpen && "nav-items-dropdown--open"}`}>
