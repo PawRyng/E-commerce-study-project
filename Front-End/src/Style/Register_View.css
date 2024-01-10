@@ -1,0 +1,114 @@
+.register {
+  max-width: 1500px;
+  margin-inline: auto;
+  min-height: calc(100vh - 166px);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+}
+.register-left {
+  width: calc(50% - 10px);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-left-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  width: 80%;
+  background-color: #1c1c1c;
+  border-radius: 30px;
+  aspect-ratio: 1/1;
+  border: 1px solid #313030;
+}
+.register-left-inner h2 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+.register-left-inner form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.register-left-inner form label {
+  margin-block: 5px;
+  align-self: start;
+}
+.register-left-inner form label[for=password] {
+  margin-block-start: 30px;
+}
+.register-left-inner form input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+.register-left-inner form input[type=submit] {
+  width: 100%;
+  border-radius: 100vmax;
+  border: none;
+  background-color: #7f58e6;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-block: 8px;
+  cursor: pointer;
+  margin-block-start: 30px;
+}
+.register-left-inner form input.input-error {
+  border-color: #f44336;
+}
+.register-left-inner form p {
+  text-align: left;
+  align-self: flex-start;
+  margin-block-start: 5px;
+  font-size: 14px;
+  color: #f44336;
+}
+.register-right {
+  width: calc(50% - 10px);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register-right-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  width: 80%;
+  background-color: #1c1c1c;
+  border-radius: 30px;
+  aspect-ratio: 1/1;
+  border: 1px solid #313030;
+}
+.register-right-inner h3 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+.register-right-inner__button {
+  width: 100%;
+  border-radius: 100vmax;
+  border: none;
+  background-color: #7f58e6;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-block: 8px;
+  cursor: pointer;
+  max-width: 300px;
+  text-decoration: none;
+  text-align: center;
+}/*# sourceMappingURL=Register_View.css.map */

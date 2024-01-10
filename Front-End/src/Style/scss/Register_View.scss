@@ -1,0 +1,103 @@
+@use "./mixins/buttons";
+$space-beetwen: 10px;
+// @include buttons.main-button;
+.register{
+    max-width: 1500px;
+    margin-inline: auto;
+    min-height: calc(100vh - (92px + 74px));
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    &-left{
+        width: calc(50% - $space-beetwen);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+            width: 80%;
+            background-color: #1c1c1c;
+            border-radius: 30px;
+            aspect-ratio: 1/1;
+            border: 1px solid #313030;
+            h2{
+                color: white;
+                font-size: 40px;
+                text-align: center;
+            }
+            form{
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                label{
+                    margin-block: 5px;
+                    align-self: start;
+                    &[for="password"]{
+                        margin-block-start: 30px;
+                        // margin-block-end: 5px;
+                    }
+                }
+                input{
+                    padding: 10px;
+                    width: 100%;
+                    border-radius: 5px;
+                    &[type="submit"]{
+                        @include buttons.main-button;
+                        margin-block-start: 30px;
+                    }
+                    &.input-error{
+                        border-color: #f44336;
+                    }
+                    
+                }
+                p{
+                    text-align: left;
+                    align-self: flex-start;
+                    margin-block-start: 5px;
+                    font-size: 14px;
+                    color: #f44336;
+                }
+            }
+        }
+    }
+    &-right{
+        width: calc(50% - $space-beetwen);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-inner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+            width: 80%;
+            background-color: #1c1c1c;
+            border-radius: 30px;
+            aspect-ratio: 1/1;
+            border: 1px solid #313030;
+            h3{
+                color: white;
+                font-size: 40px;
+                text-align: center;
+            }
+            &__button{
+                @include buttons.main-button;
+                max-width: 300px;
+                text-decoration: none;
+                text-align: center;
+            }
+        }
+        
+    }
+}

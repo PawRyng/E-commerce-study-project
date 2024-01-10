@@ -45,6 +45,7 @@ nav .nav-items-dropdown a {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 12px;
+  white-space: nowrap;
 }
 nav .nav-items__user {
   position: relative;

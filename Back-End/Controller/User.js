@@ -20,9 +20,8 @@ module.exports = {
         try{
             const {username, password, isAdmin } = req.body;
             const existingUser = await User.findOne({ username });
-
             if(existingUser){
-                return res.status(400).json({message: "User with this username exist"});
+                return res.status(409).json({message: "User with this username exist"});
             }
             const newUser = new User({
                 username,
@@ -30,7 +29,6 @@ module.exports = {
                 isAdmin: isAdmin || false
             });
             newUser.save();
-
             res.status(201).json({message: "User are created!"})
 
 

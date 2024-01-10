@@ -6,13 +6,13 @@ const actionTypes = {
 
 // Początkowy stan
 const initialState = {
-  isOpen: false,
+  token: false,
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
     case actionTypes.SET_VARIABLE:
-      return { ...state, isOpen: action.payload };
+      return { ...state, token: action.payload };
     default:
       return state;
   }
@@ -23,7 +23,7 @@ const GlobalStateContext = createContext();
 const GlobalStateProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const setIsOpen = (value) => {
+  const setToken = (value) => {
     dispatch({ type: actionTypes.SET_VARIABLE, payload: value });
   };
 
@@ -31,7 +31,7 @@ const GlobalStateProvider = ({ children }) => {
     <GlobalStateContext.Provider
       value={{
         state,
-        setIsOpen,
+        setToken,
       }}
     >
       {children}
