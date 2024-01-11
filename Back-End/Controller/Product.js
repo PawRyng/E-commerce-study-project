@@ -4,7 +4,6 @@ module.exports = {
     getProduct: async (req, res) =>{
 
     const productID = req.params.porductID;
-    console.log(productID)
 
     // res.send(`Product ID: ${productID}`);
     try{
@@ -43,20 +42,22 @@ module.exports = {
             const existingProduct = await Product.findOne({ name });
 
             let pathToImage = '/images/no-image.svg';
+            let bestsellerVal = false
             if(existingProduct){
                 return res.status(400).json({message: "This product is in DB"})
             }
             if(imagePath){
                 pathToImage = imagePath;
+            }           
+            if(bestseller === "on"){
+                bestsellerVal = true;
             }
             
-            
-            
             const newUser = new Product({
-                name, description, mainCategory, price, bestseller, imagePath: pathToImage 
+                name, description, mainCategory, price, bestseller: bestsellerVal, imagePath: pathToImage 
             })
             newUser.save()
-            res.status(201).json({name: "existingProduct"})
+            res.status(201).json({name: "ok"})
         }
         catch(err){
             console.error(err)

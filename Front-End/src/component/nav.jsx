@@ -18,13 +18,11 @@ const Nav = ()=>{
         const storedToken = localStorage.getItem('token');
         if(storedToken){
             setToken(storedToken);
-            const isAdminVar = JSON.parse(atob(storedToken.split('.')[1])).isAdmin 
-            console.log(JSON.parse(atob(storedToken.split('.')[1])));
+            const isAdminVar = JSON.parse(atob(storedToken.split('.')[1])).isAdmin
             if(isAdminVar){
                 setIsAdmin(isAdminVar)
             }
         }
-        console.log(isAdmin)
     }, []);
 
     const logoutHandle = ()=>{

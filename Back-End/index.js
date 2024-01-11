@@ -34,6 +34,8 @@ const cart = require('./Router/cart')
 
 app.use(dbConnection);
 
+app.use(express.static('public'));
+
 app.use('/user',userRouter);
 app.use('/product', product);
 app.use('/cart', cart);

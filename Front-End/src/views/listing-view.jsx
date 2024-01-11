@@ -17,7 +17,8 @@ import { categories } from '../data/settings.json'
 
 
 const ListingView = ()=>{
-    const {products} = useLoaderData()
+    const {products} = useLoaderData();
+    console.log(products)
 
     return(
         <>

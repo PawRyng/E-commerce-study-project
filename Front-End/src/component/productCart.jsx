@@ -21,7 +21,7 @@ const ProductCart = ({product, key}) =>{
             <Link to={`/product/${_id}`}>
                 <img src={`${import.meta.env.VITE_APP_USER_URL}${imagePath}`} alt={name} />
                 <p className="product-cart__name">{name}</p>
-                <p className="product-cart__price">{price.toFixed(2)} <span>zł</span></p>
+                <p className="product-cart__price">{price?.toFixed(2)} <span>zł</span></p>
             </Link>
             <button className="product-cart__add-to-cart" onClick={addToCartHandler}>Dodaj do koszyka</button>
         </div>

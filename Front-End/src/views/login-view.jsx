@@ -13,10 +13,6 @@ import "../Style/Register_View.css";
 const LoginView = ()=>{
     const data = useActionData();
 
-    console.log(data)
-    if(data?.status === 200){
-        console.log(data.message)
-    }
     return(
         <>
         <Nav />
