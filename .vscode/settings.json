@@ -1,0 +1,24 @@
+{
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/Front-End/src/Style" 
+      }
+    ],
+    "liveSassCompile.settings.formatsCompressed": [
+      {
+        "format": "compressed",
+        "extensionName": ".css",
+        "savePath": "/Front-End/src/Style/css"
+      }
+    ],
+    "liveSassCompile.settings.formatsMap": [
+      {
+        "format": "expanded",
+        "extensionName": ".css.map",
+        "savePath": "/Front-End/src/Style/maps" 
+      }
+    ]
+  }
+  
