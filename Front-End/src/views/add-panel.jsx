@@ -12,7 +12,7 @@ import { categories } from '../data/settings.json'
 
 
 
-const AdminPanel = ()=>{
+const AddProductPanel = ()=>{
     const data = useActionData();
     return(
         <>
@@ -51,4 +51,4 @@ const AdminPanel = ()=>{
     )
 }
 
-export default AdminPanel
+export default AddProductPanel

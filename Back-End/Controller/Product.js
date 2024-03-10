@@ -64,5 +64,21 @@ module.exports = {
             res.status(500).json({message: "error"})
         }
         
+    },
+    deleteProduct: (req, res)=>{
+        const { idProduct } = req.params
+        Product.findByIdAndDelete(idProduct).exec().then(product =>{
+            if(product){
+                return res.status(204).json({message:'Product was deleted'})
+            }
+            else{
+                return res.status(404).json({message: 'Not found produuct with this id'})
+            }
+        }).catch(err=>{
+            if(err){
+                console.log(err)
+                return res.status(500).json({message:'Server Error', error: err})
+            }
+        })
     }
 }

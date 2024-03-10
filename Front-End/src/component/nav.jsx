@@ -48,7 +48,7 @@ const Nav = ()=>{
                         </>
                             ) : (<>
                             {
-                                isAdmin && <NavLink to="/add-product">Dodaj produkt</NavLink>
+                                isAdmin && <NavLink to="/admin/products">Admin</NavLink>
                             }    
                                 <NavLink onClick={logoutHandle}>Wyloguj</NavLink>    
                             </>                   
